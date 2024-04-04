@@ -22,6 +22,7 @@ const authRoutes = require(`./routes/authRoutes`);
 const userRoutes = require(`./routes/userRoutes`);
 const bookRoutes = require(`./routes/bookRoutes`);
 
+app.use(express.static(`./public`));
 app.use(express.json());
 app.use(fileUpload({useTempFiles: true}));
 app.use(cookieParser(process.env.JWT_SECRET));
